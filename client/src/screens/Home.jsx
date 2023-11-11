@@ -9,7 +9,7 @@ export default function Home() {
   const [search, setSearch] = useState('')
   const loadFoodItems = async () => {
     console.log("in food items");
-    let response = await fetch("http://localhost:5000/api/auth/foodData", {
+    let response = await fetch("https://order-my-food-nine.vercel.app/api/auth/foodData", {
       // credentials: 'include',
       // Origin:"http://localhost:3000/login",
       method: 'POST',
