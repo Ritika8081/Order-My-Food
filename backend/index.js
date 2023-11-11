@@ -5,16 +5,16 @@ global.foodData = require('./db')(function call(err, data, CatData) {
   global.foodData = data;
   global.foodCategory = CatData;
 })
-var cors = require('cors')
+// var cors = require('cors')
 const express = require('express')
 const app = express();
-app.use(cors(
-  {
-    origin:["https://order-my-food-ap1y.vercel.app/"],
-    methods:["POST","GET"],
-    credentials:true
-  }
-))
+// app.use(cors(
+//   {
+//     origin:["https://order-my-food-ap1y.vercel.app/"],
+//     methods:["POST","GET"],
+//     credentials:true
+//   }
+// ))
 const port = 5000
 app.use((req, res, next) => {
   res.setHeader("Access-Control-Allow-Origin", "http://localhost:3000");
